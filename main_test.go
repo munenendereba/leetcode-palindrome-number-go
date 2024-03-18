@@ -32,3 +32,29 @@ func TestIsPalindrome(t *testing.T) {
 		})
 	}
 }
+
+func TestIsPalindrome2(t *testing.T) {
+	for _, test := range tests {
+		testname := fmt.Sprintf("running test with input(%d)", test.number)
+
+		t.Run(testname, func(t *testing.T) {
+			out := isPalindrome2(test.number)
+
+			if out != test.expected {
+				t.Errorf("isPalindrome(%d) expected %t, but got %t", test.number, test.expected, out)
+			}
+		})
+	}
+}
+
+func BenchmarkIsPalindrome(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		isPalindrome(101)
+	}
+}
+
+func BenchmarkIsPalindrome2(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		isPalindrome2(101)
+	}
+}

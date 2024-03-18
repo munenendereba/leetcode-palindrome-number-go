@@ -1,12 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
 func main() {
-	fmt.Println(7 / 2)
+	isPalindrome2(20)
 }
 
 func isPalindrome(x int) bool {
@@ -29,4 +28,21 @@ func isPalindrome(x int) bool {
 	}
 
 	return true
+}
+
+func isPalindrome2(x int) bool {
+	result := 0
+	input_num := x
+	var remainder int
+	for x > 0 {
+		remainder = x % 10
+		result = (result * 10) + remainder
+		x /= 10
+	}
+
+	if input_num == result {
+		return true
+	} else {
+		return false
+	}
 }
