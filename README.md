@@ -2,7 +2,7 @@
 
 ## Problem
 
-Solve the following problem in Leetcode [palindrome-numbe](https://leetcode.com/problems/palindrome-numbe) using Golang
+Solve the following problem in Leetcode [palindrome-number](https://leetcode.com/problems/palindrome-number) using Golang
 
 Given an integer x, return true if x is a
 palindrome
